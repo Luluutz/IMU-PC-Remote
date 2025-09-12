@@ -1,4 +1,4 @@
-12.09.25
+# 12.09.25
 Created the Github Repo. Nothing else really.
 I am really excited to start adding some stuff to the repo and setting everthing up tomorrow!
 The plan is to write both code for the PC application (Windows for now) and the microcontroller that reads the imu data.
