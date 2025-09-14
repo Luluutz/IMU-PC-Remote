@@ -21,7 +21,7 @@ My first concrete plan is now to establish a connection between the microcontrol
 <p>Since I keep talking about "the microcontroller" and "the IMU" I should probablt thing about what specific components to use.<br>
 Since the only IMU's I own are the BMI160 by Bosch which features a gyroscope and an accelerometer.<br>
 For the microcontroller I am faced with two options: 
-- The first one is the standard ESP32 development board which is a rather large board for the simple task of sending IMU data over a socket connection.
-- The second one is a the Wemos D1 Mini board which is based on an ESP8266 which is signifficantly smaller.
+-The first one is the standard ESP32 development board which is a rather large board for the simple task of sending IMU data over a socket connection.
+-The second one is a the Wemos D1 Mini board which is based on an ESP8266 which is signifficantly smaller.
 Both have wifi functionallity which I need for the socket communication and since this is gonna be a small handheld device when its done, I'll be going with the D1 mini.<br>
 I havent gotten to do a lot of research on this project yet but I'll be looking into the datasheets of both the IMU and the microcontroller to figure out how to connect them and also into socket programming and the User Datagram Protocoll</p>
