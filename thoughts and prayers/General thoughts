@@ -1,0 +1,23 @@
+14.09.25
+
+BMI160:
+
+Datasheet says it has a 16 bit digital, triaxial accelerometer and a 16 bit digital, triaxial gyroscope.
+This probably means I dont have to worry about analog to digital convertion of IMU data muhahahahaha
+
+Okay so the BMI has registers (adresses) specified for me to put specific data in (like output sampling rate which I should definitely limit to not waste resources like battery power and bandwidth)
+
+Also the BMI has different modes of opperation. It has a low power mode and a full operation mode which is great for this application for when the user puts down the remote and doesnt use it anymore.
+Ill have to figure out how to detect the user putting it down tho and also how to switch the modes.
+Idea: IMU has a flat detection which detects when it is being put down (like on a table) and when it is being picked up. Great for switching modes to save power!
+Important: "the default I²C address of the device is 0b1101000 (0x68). It is used if the SDO pin is pulled to ´GND´" ( 3.2.3 )
+
+General question:
+The BMI160 datasheet talkes about adjusting values in registers but how do I do that? Are we able to flash the IMU chip through the microcontroller or does the BMI use the microcontrollers memory?
+maybe answer: The microcontroller can send write commands to the IMU!
+It looks like I will have to perform a lot of read operations in the IMU in order to catch errors and a lot of writes to change modes and set everything up.
+In the BMI160 is a register map with all the addresses and bits
+
+Thought: The IMU data is stored in a FIFO storage, so in order for it not to overflow/underflow I should aim to transfer the data to the microcontroller with the same "sampling rate" as data is flowing into the FIFO
+
+
