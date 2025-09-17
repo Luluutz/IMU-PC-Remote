@@ -25,3 +25,10 @@ For the microcontroller I am faced with two options: <br>
 -The second one is a the Wemos D1 Mini board which is based on an ESP8266 which is signifficantly smaller. <br>
 Both have wifi functionallity which I need for the socket communication and since this is gonna be a small handheld device when its done, I'll be going with the D1 mini.<br>
 I havent gotten to do a lot of research on this project yet but I'll be looking into the datasheets of both the IMU and the microcontroller to figure out how to connect them and also into socket programming and the User Datagram Protocoll</p>
+
+# 17.09.25
+<p>Today I initialized the Arduino IDE with all the libraries and board thingies you need and tried out some basic things with the microcontroller like having its led blink and such. <br>
+It helped me understand a little bit better how everthing is gonna work. <br>
+I also connected the development board to the BMI160 board on a breadboard and foolishly tried to read out the sensor data with the help of a library (it didnt work) <br>
+I'm probably gonna research around a little and take a look at some projects on GitHub using the BMI160 to figure out how to extract data from it. <br>
+Another thing that I am gonna do is play around with UDP sockets which should work better than the IMU thing since this is a pure software thing.</p>
